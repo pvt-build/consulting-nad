@@ -1,0 +1,195 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Founder OS · NAD</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--hueso:#EFEDE9;--tinta:#101010;--t2:#4A4C55;--t3:#85878F;--pvt:#E5322D;--verde:#0E9A63;
+ --card:#fff;--linea:rgba(0,0,0,.10);--amb:#C98A00;
+ --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;--mono:ui-monospace,'SF Mono',Menlo,monospace;
+ --sombra:0 2px 10px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04)}
+body{background:var(--hueso);color:var(--tinta);font:400 15px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+header.tb{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;
+ padding-bottom:14px;border-bottom:2px solid var(--tinta);margin-bottom:22px}
+.tb h1{font-size:clamp(26px,4vw,40px);letter-spacing:-.03em;line-height:1}
+.tb .sub{font:700 10.5px/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--t3);margin-top:8px}
+.tb .rt{font:700 10.5px/1.6 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--t3);text-align:right}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+nav button{font:700 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--t2);
+ background:transparent;border:1px solid var(--linea);border-radius:999px;padding:10px 16px;cursor:pointer}
+nav button.on{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.pg{display:none}.pg.on{display:block}
+h3{font-size:12px;font-family:var(--mono);font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--t3);margin:26px 0 12px}
+.card{background:var(--card);border-radius:14px;box-shadow:var(--sombra);padding:20px}
+.row2{display:grid;grid-template-columns:minmax(240px,1fr) 2fr;gap:14px}
+.gcard{display:flex;align-items:center;gap:18px}
+.gg{width:110px;height:110px;flex:0 0 110px}
+.gbg{fill:none;stroke:rgba(0,0,0,.08);stroke-width:11}
+.gfg{fill:none;stroke:var(--pvt);stroke-width:11;stroke-linecap:round}
+.gn{text-anchor:middle;font:700 30px var(--sans);fill:var(--tinta)}
+.gs{text-anchor:middle;font:700 9px var(--mono);letter-spacing:.16em;fill:var(--t3)}
+.gcard .k{font:700 10px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--t3)}
+.gcard b{display:block;font-size:26px;letter-spacing:-.02em;margin:6px 0 2px}
+.gcard span{font-size:13px;color:var(--t2)}
+.mets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.met{background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:14px}
+.met .k{display:block;font:700 9.5px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--t3)}
+.met .n{display:block;font-size:24px;font-weight:700;letter-spacing:-.03em;margin:6px 0 3px}
+.met .s{font-size:11.5px;color:var(--t2);line-height:1.35}
+.met.r .n{color:var(--pvt)}
+.et{padding:13px 0;border-bottom:1px solid var(--linea);display:grid;grid-template-columns:1fr 150px 70px;
+ gap:14px;align-items:center}
+.et:last-child{border-bottom:0}
+.eth{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.et b{font-size:15px;letter-spacing:-.01em}
+.et .who{font:700 9.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--t3)}
+.et .s{grid-column:1;font-size:12.5px;color:var(--t2)}
+.bar{grid-column:2;grid-row:1/3;position:relative;height:9px;border-radius:9px;background:rgba(0,0,0,.07)}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:9px}
+.bar u{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--verde)}
+.et .num{grid-column:3;grid-row:1/3;text-align:right;font-size:19px;font-weight:700;letter-spacing:-.02em}
+.et .num u{font-size:12px;color:var(--t3);font-weight:400;text-decoration:none}
+.alerts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.al{background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:14px 16px;border-left:3px solid}
+.al.r{border-color:var(--pvt)}.al.a{border-color:var(--amb)}
+.al b{display:block;font-size:14px;margin-bottom:3px}
+.al span{font-size:12.5px;color:var(--t2)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pers{border-top:3px solid var(--verde)}
+.pers.ext{border-top-color:var(--t3)}.pers.out{border-top-color:var(--pvt);opacity:.82}
+.pt b{display:block;font-size:16px;letter-spacing:-.015em}
+.pt .rol{font:700 9.5px/1.6 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--t3)}
+.pr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linea);font-size:12.5px}
+.pr:last-child{border-bottom:0}.pr span{color:var(--t3)}.pr b{text-align:right;font-weight:600}
+.note{font-size:13px;color:var(--t2);margin-top:12px;line-height:1.5}
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tool{background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:12px 14px;border-left:3px solid var(--verde)}
+.tool.mig{border-color:var(--amb)}.tool.sum{border-color:var(--pvt)}
+.tool b{display:block;font-size:13.5px}.tool span{font-size:11.5px;color:var(--t3)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:middle}
+.dot.act{background:var(--verde)}.dot.mig{background:var(--amb)}.dot.sum{background:var(--pvt)}
+.fig{width:100%;height:auto;display:block}
+.ms{font:600 9px var(--mono);letter-spacing:.1em;fill:var(--t3)}
+.bg2{font:700 19px var(--sans);letter-spacing:-.02em}
+.mini b{display:block;font-size:15px}.mini span{display:block;font-size:22px;font-weight:700;letter-spacing:-.03em;color:var(--pvt);margin:4px 0}
+.mini u{font-size:12px;color:var(--t2);text-decoration:none}
+.gantt{width:100%}
+.gf{display:grid;grid-template-columns:230px 1fr;gap:12px;align-items:center;padding:6px 0}
+.gf b{font-size:13px;font-weight:600}
+.gcs{display:grid;grid-template-columns:repeat(12,1fr);gap:3px}
+.gcs i{height:16px;border-radius:4px;background:rgba(0,0,0,.06)}
+.gcs i.on.r{background:var(--pvt)}.gcs i.on.a{background:#C9C7C2}.gcs i.on.g{background:var(--verde)}
+.gcs.cab{font:700 9px var(--mono);letter-spacing:.1em;color:var(--t3)}
+.gcs.cab span{text-align:center}
+.leg{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.lg{font:700 9.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--t3);display:flex;align-items:center;gap:6px}
+.lg::before{content:'';width:10px;height:10px;border-radius:3px;background:#C9C7C2}
+.lg.r::before{background:var(--pvt)}.lg.g::before{background:var(--verde)}
+.ses{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sc{background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:14px}
+.sc.now{box-shadow:inset 0 0 0 1.5px rgba(229,50,45,.35),var(--sombra);background:#FDF3F2}
+.sc .k{font:700 9.5px/1 var(--mono);letter-spacing:.18em;color:var(--t3)}
+.sc b{display:block;font-size:14px;margin:5px 0 3px}
+.sc .s{font-size:12px;color:var(--t2);line-height:1.4}
+.cf{display:grid;grid-template-columns:1fr 150px 1.4fr;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--linea)}
+.cf:last-child{border-bottom:0}
+.cf b{font-size:14.5px}
+.cf .st{font:700 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.cf.r .st{color:var(--pvt)}.cf.a .st{color:var(--amb)}
+.cf .s{font-size:12.5px;color:var(--t2)}
+.ruta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.rp{flex:1;min-width:190px;background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:14px}
+.rp b{display:block;font-size:14px}.rp span{font-size:12px;color:var(--t2)}
+.ar{color:var(--pvt);font-size:20px}
+.acc{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:700 11px/1 var(--mono);letter-spacing:.1em;border:1px solid var(--linea);border-radius:999px;padding:9px 13px;color:var(--t2)}
+.fases{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}
+.fa{background:var(--card);border-radius:10px;box-shadow:var(--sombra);padding:10px 9px;border-top:3px solid rgba(0,0,0,.1)}
+.fa.on{border-top-color:var(--pvt);background:#FDF3F2}
+.fa .k{font:700 10px/1 var(--mono);color:var(--t3)}.fa b{display:block;font-size:12.5px;margin:5px 0 3px;line-height:1.2}
+.fa .s{font-size:10.5px;color:var(--t2);line-height:1.3}
+.decs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.dc{background:var(--card);border-radius:12px;box-shadow:var(--sombra);padding:14px 16px;border-left:3px solid var(--amb)}
+.dc.r{border-color:var(--pvt)}.dc.p{border-color:var(--t3)}
+.dc .k{font:700 10px/1 var(--mono);letter-spacing:.14em;color:var(--t3)}
+.dc b{display:block;font-size:15px;margin:5px 0 4px}.dc .s{display:block;font-size:12.5px;color:var(--t2)}
+.dc .nd{display:block;margin-top:8px;font:700 10.5px/1.4 var(--mono);letter-spacing:.06em;color:var(--tinta)}
+.dot.pau{background:var(--t3)}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--linea);
+ font:700 10px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--t3);
+ display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:900px){.row2,.mets,.grid3,.tools,.ses,.alerts,.decs{grid-template-columns:1fr}.fases{grid-template-columns:repeat(3,1fr)}
+ .et,.cf{grid-template-columns:1fr}.bar,.et .num,.et .s{grid-column:1;grid-row:auto}
+ .gf{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<header class="tb"><div><h1>NAD · LONGEVIX SAS</h1><div class="sub">Founder OS · Private Build</div></div>
+<div class="rt">S0 · Auditoría<br>Actualizado 29·09·26</div></header>
+<nav><button data-t="panel" class=on>Panel</button><button data-t="decisiones">Decisiones</button><button data-t="equipo">Equipo</button><button data-t="negocio">Negocio</button><button data-t="roadmap">Roadmap</button><button data-t="chile">Chile</button><button data-t="backend">Backend</button></nav>
+<div class="pg on" id="p-panel">
+ <div class="row2">
+  <div class="card gcard"><svg viewBox="0 0 130 130" class="gg"><circle cx="65" cy="65" r="52" class="gbg"/><circle cx="65" cy="65" r="52" class="gfg" stroke-dasharray="102.1 326.7" transform="rotate(-90 65 65)"/><text x="65" y="62" class="gn">25</text><text x="65" y="80" class="gs">de 80</text></svg><div><div class="k">Score del motor</div>
+   <b>25 de 80</b><span>Meta a la semana 12: 61</span></div></div>
+  <div class="mets"><div class="met "><span class="k">Facturación</span><span class="n">US$65k</span><span class="s">al mes · ARS 100.000.000</span></div><div class="met r"><span class="k">Margen</span><span class="n">17%</span><span class="s">US$11.000 al mes</span></div><div class="met r"><span class="k">Pauta</span><span class="n">US$6.700</span><span class="s">ROAS 5 · era 8 en abril</span></div><div class="met "><span class="k">Carritos</span><span class="n">ARS 6,8M</span><span class="s">recuperados en sep · margen sin medir</span></div><div class="met r"><span class="k">Recompra</span><span class="n">20%</span><span class="s">sin gestionar · email 16% apertura</span></div><div class="met r"><span class="k">Doble carga</span><span class="n">~8%</span><span class="s">de las ventas, cargadas a mano dos veces</span></div></div>
+ </div>
+ <h3>La secuencia</h3>
+ <div class="fases"><div class="fa on"><span class="k">1</span><b>Centralizar</b><span class="s">Todo en una carpeta</span></div><div class="fa "><span class="k">2</span><b>El número</b><span class="s">Matriz de costos y margen real</span></div><div class="fa "><span class="k">3</span><b>Drive compartido</b><span class="s">Acceso para ambos socios</span></div><div class="fa "><span class="k">4</span><b>Sistemas de equipo</b><span class="s">Rol, proceso y métrica</span></div><div class="fa "><span class="k">5</span><b>Diagnóstico</b><span class="s">Las 8 etapas con data</span></div><div class="fa "><span class="k">6</span><b>Las fugas</b><span class="s">Dónde se pierde plata</span></div><div class="fa "><span class="k">7</span><b>Acceso por área</b><span class="s">Claude operativo del equipo</span></div><div class="fa "><span class="k">8</span><b>Claridad</b><span class="s">Cada rol acciona solo</span></div><div class="fa "><span class="k">9</span><b>Vault</b><span class="s">Lo que sirve se replica</span></div></div>
+ <h3>Las ocho etapas</h3>
+ <div class="card"><div class="et"><div class="eth"><b>01 · Foundations</b><span class="who">JP + contables</span></div><span class="s">Producto, equipo y visión claros. El margen fino, no.</span><div class="bar"><i style="width:40%;background:#C98A00"></i><u style="left:80%"></u></div><span class="num">4 <u>/ 8</u></span></div><div class="et"><div class="eth"><b>02 · Atracción</b><span class="who">Matías</span></div><span class="s">US$6.700/mes en pauta. ROAS de 8 en abril a 5 hoy.</span><div class="bar"><i style="width:60%;background:#C98A00"></i><u style="left:90%"></u></div><span class="num">6 <u>/ 9</u></span></div><div class="et"><div class="eth"><b>03 · Activación</b><span class="who">Matías + Nacho</span></div><span class="s">Migrando de Tienda Nube a Shopify. Dos tiendas en paralelo.</span><div class="bar"><i style="width:40%;background:#C98A00"></i><u style="left:80%"></u></div><span class="num">4 <u>/ 8</u></span></div><div class="et"><div class="eth"><b>04 · Conversión</b><span class="who">Nacho</span></div><span class="s">Carritos recuperados a mano por WhatsApp. La tasa no se mide.</span><div class="bar"><i style="width:20%;background:var(--pvt)"></i><u style="left:70%"></u></div><span class="num">2 <u>/ 7</u></span></div><div class="et"><div class="eth"><b>05 · AOV</b><span class="who">JP</span></div><span class="s">Kits, 3x2 y hasta 45%, sin margen por promo.</span><div class="bar"><i style="width:40%;background:#C98A00"></i><u style="left:80%"></u></div><span class="num">4 <u>/ 8</u></span></div><div class="et"><div class="eth"><b>06 · Retención</b><span class="who">Por definir</span></div><span class="s">20% vuelve solo. Email con 16% de apertura.</span><div class="bar"><i style="width:10%;background:var(--pvt)"></i><u style="left:70%"></u></div><span class="num">1 <u>/ 7</u></span></div><div class="et"><div class="eth"><b>07 · Referidos</b><span class="who">Candela</span></div><span class="s">Influencers desde el día uno, sin criterio escrito.</span><div class="bar"><i style="width:30%;background:#C98A00"></i><u style="left:60%"></u></div><span class="num">3 <u>/ 6</u></span></div><div class="et"><div class="eth"><b>08 · Systems</b><span class="who">Patricio</span></div><span class="s">Todo pasa por JP y por Nacho. Nadie ve el trabajo del otro.</span><div class="bar"><i style="width:10%;background:var(--pvt)"></i><u style="left:80%"></u></div><span class="num">1 <u>/ 8</u></span></div></div>
+</div><div class="pg" id="p-decisiones">
+ <h3>El tablero del founder</h3>
+ <p class="note" style="margin:0 0 14px">Primero se decide acá. Después se baja la claridad al equipo.</p>
+ <div class="decs"><div class="dc a"><span class="k">D1</span><b>Dirección de marketing</b><span class="s">El rol se superpone con el founder y el Q4 no tiene estrategia escrita. Candela absorbe parte.</span><span class="nd">Para decidir: Traspaso escrito antes de mover nada</span></div><div class="dc r"><span class="k">D2</span><b>Dos tiendas Tienda Nube</b><span class="s">Pedidos cargados dos veces a mano por facturación: ~8% de las ventas.</span><span class="nd">Para decidir: ¿Se puede facturar desde una sola?</span></div><div class="dc r"><span class="k">D3</span><b>CRM de US$500/mes</b><span class="s">Más tokens de IA, sin ROI medido contra lo que vende.</span><span class="nd">Para decidir: 30 días midiendo ventas atribuidas</span></div><div class="dc r"><span class="k">D4</span><b>Quién decide sobre los números</b><span class="s">Dos consultoras contables y de gestión, más Private.</span><span class="nd">Para decidir: Frontera escrita: quién hace qué</span></div><div class="dc p"><span class="k">D5</span><b>Email marketing</b><span class="s">16% de apertura. Especialista pospuesto hasta la auditoría.</span><span class="nd">Para decidir: Diagnóstico de retención</span></div><div class="dc a"><span class="k">D6</span><b>Rol de Matías</b><span class="s">De ejecutor de tareas a dueño de un sistema.</span><span class="nd">Para decidir: Mapa de roles en Miro</span></div><div class="dc r"><span class="k">D7</span><b>Cómo entra Chile</b><span class="s">Preventa de 250 u · Greatlet a US$20/u · Mercado Pago de residente.</span><span class="nd">Para decidir: Estado regulatorio de la fórmula</span></div><div class="dc a"><span class="k">D8</span><b>Sitio en Shopify</b><span class="s">10 errores detectados, lanzado sin revisión del equipo.</span><span class="nd">Para decidir: Checklist de lanzamiento</span></div><div class="dc a"><span class="k">D9</span><b>Influencers</b><span class="s">Target mujeres 35+; cierres con perfiles de 20.</span><span class="nd">Para decidir: Criterio escrito de selección</span></div><div class="dc a"><span class="k">D10</span><b>Carritos por WhatsApp</b><span class="s">ARS 6,8M recuperados en septiembre.</span><span class="nd">Para decidir: Cuánto deja: descuento + tiempo</span></div></div>
+ <p class="note"><span class="dot sum"></span>Bloquea algo &nbsp; <span class="dot mig"></span>En curso &nbsp; <span class="dot pau"></span>Pospuesta a propósito</p>
+ <h3>Lo que se repite en todo el equipo</h3>
+ <div class="grid3"><div class="card mini"><b>Nadie ve el trabajo del otro</b><u>Las decisiones viven en conversaciones sueltas. Lo nombraron Candela y Agustina.</u></div><div class="card mini"><b>Se decide sin backend</b><u>Marketing no conoce el margen; las promos y cupones salen a ciegas.</u></div><div class="card mini"><b>Todo pasa por dos personas</b><u>El founder decide todo y Ops opera todo. Son los dos cuellos de botella.</u></div><div class="card mini"><b>Fugas manuales medibles</b><u>Doble carga, reenvíos a mano, carritos sin margen conocido.</u></div><div class="card mini"><b>La marca no es coherente</b><u>Target 35+ con influencers de 20; etiquetas viejas en lotes nuevos.</u></div><div class="card mini"><b>Números sin dueño claro</b><u>Dos consultoras y Private: no está escrito quién decide qué.</u></div></div>
+</div><div class="pg" id="p-equipo">
+ <h3>Quién mueve qué</h3>
+ <div class="grid3"><div class="card pers act"><div class="pt"><b>Juan Pablo Favia</b><span class="rol">Founder</span></div><div class="pr"><span>Mueve</span><b>Producto, precio, contrataciones y expansión</b></div><div class="pr"><span>Métrica</span><b>El margen del mes</b></div><div class="pr"><span>Dónde</span><b>Command center</b></div></div><div class="card pers act"><div class="pt"><b>Matías Roldán</b><span class="rol">Implementación · paid</span></div><div class="pr"><span>Mueve</span><b>Sistemas, pauta, CRO, Mercado Libre</b></div><div class="pr"><span>Métrica</span><b>ROAS · CPA · CAC</b></div><div class="pr"><span>Dónde</span><b>Meta · TikTok · Miro · GPT</b></div></div><div class="card pers act"><div class="pt"><b>Nacho Amiuchi</b><span class="rol">Ops y ventas</span></div><div class="pr"><span>Mueve</span><b>WhatsApp, pedidos, carritos, reenvíos</b></div><div class="pr"><span>Métrica</span><b>Pedidos cerrados y carritos, con margen</b></div><div class="pr"><span>Dónde</span><b>Tienda Nube ×2 · CRM</b></div></div><div class="card pers act"><div class="pt"><b>Candela Pereira</b><span class="rol">Social media</span></div><div class="pr"><span>Mueve</span><b>Estrategia de IG, diseño, influencers, reportes</b></div><div class="pr"><span>Métrica</span><b>Alcance y qué contenido vende</b></div><div class="pr"><span>Dónde</span><b>Instagram · Notion · Drive</b></div></div><div class="card pers act"><div class="pt"><b>Sol</b><span class="rol">Community manager</span></div><div class="pr"><span>Mueve</span><b>Publicación y contenido con rostro</b></div><div class="pr"><span>Métrica</span><b>Frecuencia y respuesta</b></div><div class="pr"><span>Dónde</span><b>Instagram · TikTok</b></div></div><div class="card pers act"><div class="pt"><b>Rocío</b><span class="rol">Logística</span></div><div class="pr"><span>Mueve</span><b>Cumplimiento de pedidos</b></div><div class="pr"><span>Métrica</span><b>Entregas a tiempo</b></div><div class="pr"><span>Dónde</span><b>Fulfillment AR</b></div></div><div class="card pers out"><div class="pt"><b>Agustina Enríquez</b><span class="rol">Dirección de marketing</span></div><div class="pr"><span>Mueve</span><b>Marca, influencers y email</b></div><div class="pr"><span>Métrica</span><b>—</b></div><div class="pr"><span>Dónde</span><b>En transición · traspaso escrito</b></div></div><div class="card pers ext"><div class="pt"><b>Contable Integral</b><span class="rol">Contabilidad</span></div><div class="pr"><span>Mueve</span><b>Reportes contables</b></div><div class="pr"><span>Métrica</span><b>Margen real</b></div><div class="pr"><span>Dónde</span><b>Julián Majul</b></div></div><div class="card pers ext"><div class="pt"><b>CCA Consulting</b><span class="rol">Gestión e impuestos</span></div><div class="pr"><span>Mueve</span><b>Planificación impositiva</b></div><div class="pr"><span>Métrica</span><b>—</b></div><div class="pr"><span>Dónde</span><b>Constanza · Lara · Lau</b></div></div></div>
+ <p class="note">Regla del programa: cada rol con <b>una</b> métrica que mueve, no con una lista de tareas.</p>
+ <h3>Herramientas</h3>
+ <div class="tools"><div class="tool act"><b>Meta Ads</b><span>Pauta</span></div><div class="tool act"><b>TikTok Ads</b><span>Pauta</span></div><div class="tool act"><b>Instagram</b><span>Contenido</span></div><div class="tool act"><b>Tienda Nube ×2</b><span>Tienda · doble carga</span></div><div class="tool mig"><b>Shopify</b><span>Tienda nueva</span></div><div class="tool act"><b>Mercado Libre</b><span>Marketplace</span></div><div class="tool act"><b>CRM · US$500/mes</b><span>Ventas</span></div><div class="tool act"><b>WhatsApp</b><span>Ventas y soporte</span></div><div class="tool sum"><b>Notion</b><span>Command center</span></div><div class="tool sum"><b>Claude</b><span>Skills y agentes</span></div><div class="tool sum"><b>Miro</b><span>Mapa de roles</span></div><div class="tool act"><b>Google Drive</b><span>Diseños</span></div></div>
+ <p class="note"><span class="dot act"></span>Corre hoy &nbsp; <span class="dot mig"></span>En migración &nbsp; <span class="dot sum"></span>Lo sumamos</p>
+</div><div class="pg" id="p-negocio">
+ <h3>Un mes normal</h3>
+ <div class="card"><svg viewBox="0 0 1120 300" class="fig"><rect x="40" y="40" width="107" height="210" rx="4" fill="#101010"/><text x="94" y="270" text-anchor="middle" class="ms">FACTURACIÓN</text><text x="94" y="30" text-anchor="middle" class="bg2" fill="#101010">US$65.000</text><rect x="213" y="40" width="107" height="137" rx="4" fill="#B9B7B2"/><text x="267" y="270" text-anchor="middle" class="ms">COSTO DE VENTA</text><rect x="387" y="177" width="107" height="22" rx="4" fill="#B9B7B2"/><text x="440" y="270" text-anchor="middle" class="ms">PAUTA</text><rect x="560" y="198" width="107" height="4" rx="4" fill="#B9B7B2"/><text x="614" y="270" text-anchor="middle" class="ms">DIRECCIÓN MKT</text><rect x="733" y="203" width="107" height="12" rx="4" fill="#B9B7B2"/><text x="787" y="270" text-anchor="middle" class="ms">6 ROLES MÁS</text><rect x="907" y="214" width="107" height="36" rx="4" fill="#E5322D"/><text x="960" y="270" text-anchor="middle" class="ms">MARGEN DEL MES</text><text x="960" y="204" text-anchor="middle" class="bg2" fill="#E5322D">US$11.000</text></svg></div>
+ <p class="note">ARS 100.000.000 ≈ US$65.000 · pauta ARS 10.000.000 ≈ US$6.700.
+ <b>El renglón final es el margen sobre el que se mide todo.</b> Se afina con la matriz de costos de los contables.</p>
+ <h3>Lo que hay que mover</h3>
+ <div class="grid3">
+  <div class="card mini"><b>Margen</b><span>17% → 25%</span><u>Promos ordenadas por margen, no por volumen</u></div>
+  <div class="card mini"><b>ROAS</b><span>5 → 6</span><u>Una sola fuente de atribución</u></div>
+  <div class="card mini"><b>Recompra</b><span>20% → 30%</span><u>Consumo diario con recompra gestionada</u></div>
+ </div>
+</div><div class="pg" id="p-roadmap">
+ <h3>Las 12 semanas</h3>
+ <div class="card"><div class="gantt"><div class="gf gh"><b></b><div class="gcs cab"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span><span>S7</span><span>S8</span><span>S9</span><span>S10</span><span>S11</span><span>S12</span></div></div><div class="gf"><b>Centralizar y auditar</b><div class="gcs"><i class="on r"></i><i class="on r"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div></div><div class="gf"><b>Matriz de costos</b><div class="gcs"><i class="on r"></i><i class="on r"></i><i class="on r"></i><i class="on r"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div></div><div class="gf"><b>Sistemas de equipo en Notion</b><div class="gcs"><i class=""></i><i class=""></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div></div><div class="gf"><b>Diagnóstico de growth</b><div class="gcs"><i class=""></i><i class=""></i><i class=""></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div></div><div class="gf"><b>Command center y acceso por área</b><div class="gcs"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class=""></i><i class=""></i></div></div><div class="gf"><b>Skills y agentes por rol</b><div class="gcs"><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="on g"></i><i class="on g"></i><i class="on g"></i><i class="on g"></i><i class="on g"></i></div></div><div class="gf"><b>Chile · producción y preventa</b><div class="gcs"><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i><i class="on a"></i></div></div></div>
+  <div class="leg"><span class="lg r">Primero: el número</span><span class="lg a">Estructura y conexión</span><span class="lg g">Apalancamiento</span></div></div>
+ <h3>Las sesiones</h3>
+ <div class="ses"><div class="sc now"><span class="k">S1</span><b>Auditoría y 1:1</b><span class="s">Los roles, procesos y dolores de cada persona, mapeados.</span></div><div class="sc"><span class="k">S2</span><b>La matriz de costos</b><span class="s">El margen real por producto con la data de los contables.</span></div><div class="sc"><span class="k">S3</span><b>Decisiones de estructura</b><span class="s">Qué se corta, qué se une, qué se contrata.</span></div><div class="sc"><span class="k">S4</span><b>Roles y métricas</b><span class="s">Cada perfil con un número que mueve.</span></div><div class="sc"><span class="k">S5</span><b>Command center</b><span class="s">Notion por área, conectado a la tienda y a la pauta.</span></div><div class="sc"><span class="k">S6</span><b>Conversión</b><span class="s">Tiendas, carritos y la tasa visita → pago.</span></div><div class="sc"><span class="k">S7</span><b>Retención</b><span class="s">Recompra gestionada en un producto de consumo diario.</span></div><div class="sc"><span class="k">S8</span><b>Paid con margen</b><span class="s">La pauta decidida sobre margen.</span></div><div class="sc"><span class="k">S9</span><b>Skills por célula</b><span class="s">Paid, email, SEO, CRO, reporting y data.</span></div><div class="sc"><span class="k">S10</span><b>Contrataciones</b><span class="s">El criterio con el que entra el siguiente perfil.</span></div><div class="sc"><span class="k">S11</span><b>Cierre del Q4</b><span class="s">Qué dejó cada palanca.</span></div><div class="sc"><span class="k">S12</span><b>Traspaso</b><span class="s">El sistema en manos del equipo.</span></div></div>
+</div><div class="pg" id="p-chile">
+ <h3>NatChile</h3>
+ <div class="card"><div class="cf a"><b>Producción · Greatlet</b><span class="st">Reunión jueves</span><span class="s">Ashtar · US$20/u con MOQ 200–250 · US$18/u a 1.000</span></div><div class="cf a"><b>Costo por unidad</b><span class="st">~US$65</span><span class="s">Producción + envío + pasarela · vs US$52 solo de envío importando</span></div><div class="cf a"><b>Preventa</b><span class="st">250 unidades</span><span class="s">Financia la primera producción</span></div><div class="cf r"><b>Fórmula</b><span class="st">Por revisar</span><span class="s">Ingredientes no aprobados en Chile · revisión de salud y legal</span></div><div class="cf r"><b>Pasarela</b><span class="st">Mercado Pago de residente</span><span class="s">Transitorio hasta constituir la sociedad</span></div><div class="cf r"><b>Sociedad y porcentaje</b><span class="st">Sin acordar</span><span class="s">No se constituye hasta tenerlo por escrito</span></div><div class="cf a"><b>Site NatChile</b><span class="st">Feedback pendiente</span><span class="s">Nahuel</span></div></div>
+ <p class="note"><b>La regla:</b> la preventa no sale hasta saber qué ingredientes de la fórmula se pueden comercializar en Chile.
+ Vender 250 unidades de un producto que no se puede vender es devolver 250 pagos.</p>
+ <h3>La ruta corta</h3>
+ <div class="ruta"><div class="rp"><b>Greatlet produce</b><span>Con su resolución sanitaria</span></div>
+  <span class="ar">→</span><div class="rp"><b>Fulfillment con resolución</b><span>Sin bodega propia</span></div>
+  <span class="ar">→</span><div class="rp"><b>Venta</b><span>Sin aduana en cada lote</span></div></div>
+</div><div class="pg" id="p-backend">
+ <h3>Lo que falta traer</h3>
+ <div class="card"><div class="cf a"><b>Costos unitarios por producto (pestaña 2)</b><span class="st">⬜</span><span class="s">Lara y Lau · CCA</span></div><div class="cf a"><b>Ingresos brutos por mes y región</b><span class="st">⬜</span><span class="s">Contables</span></div><div class="cf a"><b>Reportes contables de LONGEVIX</b><span class="st">⬜</span><span class="s">Julián Majul</span></div><div class="cf a"><b>Resumen de accesos</b><span class="st">⬜</span><span class="s">Constanza · CCA</span></div><div class="cf a"><b>Carpeta Social Media en Notion</b><span class="st">⬜</span><span class="s">Candela · vie 02/10</span></div><div class="cf a"><b>Mapa de roles en Miro</b><span class="st">⬜</span><span class="s">Matías</span></div></div>
+ <h3>Llamadas registradas</h3>
+ <div class="card"><div class="cf"><b>Discovery</b><span class="st">19/09</span><span class="s">Juan Pablo</span></div><div class="cf"><b>Propuesta</b><span class="st">24/09</span><span class="s">Juan Pablo</span></div><div class="cf"><b>Cierre</b><span class="st">25/09</span><span class="s">Juan Pablo</span></div><div class="cf"><b>Kickoff AR + CL</b><span class="st">28/09</span><span class="s">Juan Pablo</span></div><div class="cf"><b>1:1 · Implementación</b><span class="st">29/09</span><span class="s">Matías</span></div><div class="cf"><b>1:1 · Social media</b><span class="st">29/09</span><span class="s">Candela</span></div><div class="cf"><b>1:1 · Dirección mkt</b><span class="st">29/09</span><span class="s">Agustina</span></div><div class="cf"><b>1:1 · Ops y ventas</b><span class="st">29/09</span><span class="s">Nacho</span></div></div>
+ <h3>Los entregables</h3>
+ <div class="grid3"><div class="card mini"><b>12 sesiones 1:1</b><u>Una por semana, de 1 a 1:30 h</u></div><div class="card mini"><b>Growth engine con score</b><u>Las ocho etapas, medidas</u></div><div class="card mini"><b>Matriz de costos</b><u>COGS, CPA, CAC, máximo por venta y LTV</u></div><div class="card mini"><b>Command center</b><u>Notion conectado a Claude</u></div><div class="card mini"><b>Skills por célula</b><u>Paid, email, SEO, CRO, reporting y data</u></div><div class="card mini"><b>Procesos por rol</b><u>Y el criterio de contratación</u></div></div>
+</div>
+<footer><span>Private Build · Consultoría 12 semanas</span><span>@privatebuild.os</span></footer>
+</div><script>
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+ document.querySelectorAll('.pg').forEach(x=>x.classList.remove('on'));
+ b.classList.add('on');document.getElementById('p-'+b.dataset.t).classList.add('on');
+ window.scrollTo({top:0,behavior:'smooth'});
+}));
+</script></body></html>
